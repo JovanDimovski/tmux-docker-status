@@ -7,7 +7,7 @@ source "$CURRENT_DIR/helpers.sh"
 docker_option_string="@docker_icon"
 
 docker_icon_osx="⧈"
-docker_icon="DOCKERS: "
+docker_icon=""
 
 docker_icon_default() {
 	if is_osx; then

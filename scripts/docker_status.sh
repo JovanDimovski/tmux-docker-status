@@ -21,17 +21,17 @@ docker_count() {
 	CONTAINERS="-1"
 	if is_osx; then
 		if command_exists "docker"; then
-			if [[ $((`ps -ef | grep com.docker.hyperkit | grep -v grep | wc -l`)) > 0 ]]; then
+			# if [[ $((`ps -ef | grep com.docker.hyperkit | grep -v grep | wc -l`)) > 0 ]]; then
 				CONTAINERS=$((`docker ps -q | wc -l`))
-			fi
+			# fi
 		fi
 	fi
 
 	if is_linux; then
 		if command_exists "docker"; then
-			if [[ $((`ps -ef | grep dockerd | grep -v grep | wc -l`)) > 0 ]]; then
+			# if [[ $((`ps -ef | grep dockerd | grep -v grep | wc -l`)) > 0 ]]; then
 				CONTAINERS=$((`docker ps -q | wc -l`))
-			fi
+			# fi
 		fi
 	fi
 
